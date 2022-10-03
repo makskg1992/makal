@@ -2389,7 +2389,7 @@ const copyBtn = document.getElementById('copy-btn');
 // Get Quote and author Section
 const quote = document.querySelector('.makal_ppp');
 const alert = document.querySelector('.alert');
-
+         progress = document.querySelector(".progress");
 // Event Handler
 quoteBtn.addEventListener('click', () => {
     let random = Math.floor(Math.random() * makal.length);
@@ -2403,6 +2403,8 @@ quoteBtn.addEventListener('click', () => {
 copyBtn.onclick = () => {
     navigator.clipboard.writeText(quote.textContent)
     alert.classList.add('active')
-    setTimeout(() => alert.classList.remove('active'), 2000)
+    progress.classList.add('active')
+    setTimeout(() => alert.classList.remove('active'), 3000)
+    setTimeout(() => progress.classList.remove('active'), 3000)
 }
 

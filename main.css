@@ -88,7 +88,8 @@ body{
   z-index: 99;
   border-radius: 0px 0px 35px 35px;
   transform: translateY(-50px);
-  transition: ease-in-out 0.8s;
+  transition: ease-in-out 1s;
+  border-left: 6px solid #4070f4;
 }
 .alert.active{
   transform: translateY(0px);
@@ -96,6 +97,7 @@ body{
 .alert h3{
   color: rgba(0, 0, 0, .8);
   text-align: center;
+  margin-top: 10px;
 
 }
 .alert p{
@@ -157,3 +159,69 @@ body{
  
 }
 
+
+
+
+
+.alert .progress{
+  position: absolute;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background: #4070f4;
+    
+}
+
+.alert .progress:before{
+  content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: aquamarine;
+}
+
+.progress.active:before{
+  animation: progress 3s linear forwards;
+  
+}
+
+@keyframes progress {
+  0%{
+    width: 0%;
+  }
+  10%{
+    width:10%;
+  }
+  20%{
+    width: 20%;
+  }
+  30%{
+    width: 30%;
+  }
+  40%{
+    width: 40%;
+  }
+  50%{
+    width: 50%;
+  }
+  60%{
+    width: 60%;
+  }
+  70%{
+    width: 70%;
+  }
+  80%{
+    width: 80%;
+  }
+  90%{
+    width: 90%;
+  }
+  100%{
+    width: 100%;
+  }
+
+
+}
